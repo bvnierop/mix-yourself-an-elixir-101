@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rm "$1"
+while IFS='$\n' read -r line; do
+    echo "${line}" >> "$1"
+done
+
+cat "$1"
